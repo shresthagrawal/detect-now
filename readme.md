@@ -22,7 +22,7 @@
 `python3 App/app.py`
 
 # Training
-`python3 pyAudioAnalysis/pyAudioAnalysis/audioAnalysis.py trainClassifier -i ../data/cough/not_sick ../data/cough/sick --method randomforest -o model`
+`python3 pyAudioAnalysis/pyAudioAnalysis/audioAnalysis.py trainClassifier -i data/cough/not_sick data/cough/sick --method randomforest -o model_new`
 
 # Training Dataset
 [data-set](https://osf.io/4pt2s/)

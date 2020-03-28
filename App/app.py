@@ -52,4 +52,4 @@ def classify(fileloc, location):
 if __name__ == '__main__':
 	  app.run( port=8081, debug=True)
 	  # Test Call
-	  # print(classify('data/cough_test/not_sick/audioset__-fsiDpnxeE_225_230.wav', 'Australia'))
+	  # print(classify('data/cough_validate/not_sick/audioset__-fsiDpnxeE_225_230.wav', 'Australia'))
