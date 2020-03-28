@@ -34,13 +34,15 @@ def fn_upload():
 @app.route('/upload_test', methods=['GET', 'POST'])
 def fn_upload_test():
 	path = upload_save(request, True)
+	# TODO: Add function to converg age to int
+	# request.form.get("age",'na')
 	res = classify(
 		path, 
 		request.form.get("country",'na'),
 		request.form.get("gender",'na'),
-		request.form.get("age",'na')
+		24
 		)
-	return json.dump({'result': res})
+	return json.dumps({'result': res})
 
 def upload_save(request, tmp):
 	if request.method == 'POST':
@@ -75,6 +77,7 @@ def upload_save(request, tmp):
 
 
 def classify(fileloc, location, gender, age):
+	print(fileloc)
 	_, res, label = aT.file_classification(fileloc, "model/model", "randomforest")
 	return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
 
