@@ -2,6 +2,7 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from region_classification import detect
+from pyAudioAnalysis import audioTrainTest as aT
 import time
 
 app = Flask(__name__)
@@ -44,10 +45,11 @@ def fn_upload():
 	return '200'
 
 def classify(fileloc, location):
-	return detect(location)
+	_, res, label = aT.file_classification(fileloc, "model/model", "randomforest")
+	return (0.2 * detect(location)) + (0.8 * res[1])
 
 
 if __name__ == '__main__':
 	  app.run( port=8081, debug=True)
 	  # Test Call
-	  # print(classify('../data/cough_test/not_sick/', 'Australia'))
+	  # print(classify('data/cough_test/not_sick/audioset__-fsiDpnxeE_225_230.wav', 'Australia'))

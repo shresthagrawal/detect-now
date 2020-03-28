@@ -2,15 +2,15 @@
 virtualenv venv
 source venv/bin/activate
 
-
 #Clone 
 git clone https://github.com/tyiannak/pyAudioAnalysis.git 
 
 #Install Dependencies
-pip install -r ./pyAudioAnalysis/requirements.txt
+pip3 install -r ./App/requirements.txt
+pip3 install -r ./pyAudioAnalysis/requirements.txt
 
 #Install
-pip install -e pyAudioAnalysis
+pip3 install -e pyAudioAnalysis
 
 #Using Test.py
 python3 App/app.py
