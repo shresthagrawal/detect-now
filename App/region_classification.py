@@ -8,8 +8,8 @@ popul = np.array(pd.read_csv('data/population.csv'))
 length = len(popul[0])
 
 gend = {}
-gend['male'] = 1.07
-gend['female'] = 0.93
+gend['Male'] = 1.07
+gend['Female'] = 0.93
 
 a = {} #num of infected
 for x in data:

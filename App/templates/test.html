@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="CodePixar">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>DetectNow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select-country.min.css') }}" />
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css" />
+
+  </head>
+  <body class="dup-body">
+    <div class="dup-body-wrap">
+      <!-- Start Header Area -->
+      <header class="default-header">
+        <div class="header-wrap">
+          <div class="header-top d-flex justify-content-between align-items-center">
+            <div class="logo">
+              <a href="./"><img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 80px" alt=""></a>
+            </div>
+            <div class="main-menubar d-flex align-items-center">
+              <nav class="hide">
+                <a href="./">Home</a>
+                
+              </nav>
+              <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- End Header Area -->
+    <!-- Start Banner Area -->
+    <section class="banner-area relative">
+      <div class="overlay overlay-bg"></div>
+      <div class="container">
+        <div class="row fullscreen align-items-center justify-content-between">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="banner-content" style="margin-top: 0">
+
+
+              <h4 style="margin-bottom: 10px" for="recorrding">Please record details below</h4>
+
+               
+
+              <div class="form-group">
+                    <label for="corona_test">Corona Diagnosis</label>
+                    <select class="form-control selectpicker" id="corona_test">
+                      <option value="healthy">Healthy</option>
+                      <option value="early">Tested Positive for COVID-19</option>
+                      <option value="critical">Tested Negative for COVID-19</option>
+                    </select>
+                  </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender </label>
+                      <div class="form-check form-check-inline" style="margin-left: 5px">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="female" checked>
+                          <label class="form-check-label" for="inlineRadio1">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                          <label class="form-check-label" for="inlineRadio2">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="other">
+                          <label class="form-check-label" for="inlineRadio3">Other</label>
+                        </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lungs">Any lungs diseases </label>
+                      <div class="form-check form-check-inline" style="margin-left: 5px">
+                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes" checked>
+                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                  </div>
+
+                    <div class="form-group">
+                    <label for="country" >Your Ethnicity </label>
+                      <select class="selectpicker countrypicker" data-live-search="true" id="country" ></select>                      
+                  </div>
+
+                  <div class="form-group">
+                    <label for="age" style="margin-top: 10px">Age Group</label>
+                    <select class="form-control selectpicker" id="age">
+                      <option value="13.30">13 - 30</option>
+                      <option value="31.45">31 - 45</option>
+                      <option value="46.80">46 - 80</option>
+                      <option value="80.99">Above 80</option>
+                    </select>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="temperature">Body Temperature</label>
+                     <select class="form-control selectpicker" id="temperature">
+                      <option value="33.40">33°C - 40°C</option>
+                      <option value="41.45">41°C - 45°C</option>
+                      <option value="43.99">Above 42°C</option>
+                      <option value="na">I don't know</option>
+                    </select>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" placeholder="Weight (KG)" id = 'weight'>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" placeholder="Height" id = 'height'>
+                    </div>
+                  </div>
+                                  
+                  
+
+
+                  <div class="form-group" style="margin-top: 10px">
+                  <label for="recorrding">Please record long cough</label>
+                    <div id="controls" id = "recorrding" style="margin-top: 0">
+                     <button id="recordButton">Record</button>
+                     <button id="pauseButton" disabled>Pause</button>
+                     <button id="stopButton" disabled>Stop</button>
+                    </div>
+                    <div id="formats">Format: start recording to see sample rate</div>
+                    <ol id="recordingsList"></ol>
+
+                     </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', (event) => {
+      //the event occurred
+      $('select').selectpicker();
+    })
+    </script>
+   
+   
+    </div>
+
+    <script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+      <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap-select-country.min.js') }}"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  </body>
+</html>
