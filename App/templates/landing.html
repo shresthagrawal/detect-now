@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>DetectNow</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body class="dup-body">
+		<div class="dup-body-wrap">
+			<!-- Start Header Area -->
+			<header class="default-header">
+				<div class="header-wrap">
+					<div class="header-top d-flex justify-content-between align-items-center">
+						<div class="logo">
+							<a href="./"><img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 80px" alt=""></a>
+						</div>
+						<div class="main-menubar d-flex align-items-center">
+							<nav class="hide">
+								<a href="./">Home</a>
+								
+							</nav>
+							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		<!-- End Header Area -->
+		<!-- Start Banner Area -->
+		<section class="banner-area relative">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row fullscreen align-items-center justify-content-between">
+					<div class="col-lg-6 col-md-7 col-sm-8">
+						<div class="banner-content">
+							<h1>DetectNow</h1>
+							<p>Early-stage diagnosis of Corona Virus with high accuracy at zero cost.</p>
+							<a href="./sample" class="primary-btn">Record Sample<span class="lnr lnr-arrow-right"></span></a>
+							<a href="#" class="primary-btn"  onClick="alert('coming soon!')">Test Sample<span class="lnr lnr-arrow-right"></span></a>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-5 col-sm-4">
+						<img src="{{ url_for('static', filename='img/banner.png') }}" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Banner Area -->
+		<!-- Start studio Area -->
+		<section class="section-gap studio-area">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-4 col-sm-6 text-center">
+						<div class="studio-thumb">
+							<img src="{{ url_for('static', filename='img/s.jpg') }}" class="img-fluid" alt="">
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-6">
+						<div class="studio-content">
+							<h2>Not enough people are getting tested for COVID-19</h2>
+							<p>Everybody who is coughing shall be able to record their coughing sound with their smartphone and have an app tell them if they (likely) have COVID-19 or not. Everybody can get screened at zero costs without travelling to the doctor. </p>
+							<a href="https://docs.google.com/presentation/d/1fk218BC12NeFSNeaxywRTf7paDTwrM6t4CAFp7mxYWk/edit#slide=id.g7221d064d7_0_38" class="primary-btn">Case Study<span class="lnr lnr-arrow-right"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End studio Area -->
+		<!-- Start Achivement Area -->
+		<section class="section-gap achivement-area">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-5">
+						<div class="achivement-content">
+							<h2>Secret Sauce</h2>
+							<p class="mb-30"> Based on a large data set of coughing recordings from COVID-19 positive and negative patients, a machine learning algorithm shall be able to detect patterns to distinguish the two. </p>
+							<a href="https://docs.google.com/presentation/d/1fk218BC12NeFSNeaxywRTf7paDTwrM6t4CAFp7mxYWk/edit#slide=id.g7221d064d7_0_38" class="primary-btn">View More<span class="lnr lnr-arrow-right"></span></a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="total-achivement">
+							<div class="row">
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-table"></i>
+										</a>
+										<h6><a href="#">Virus Dataset</a></h6>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-signal"></i>
+										</a>
+										<h6><a href="#">Accurate Modelling</a></h6>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-user-secret"></i>
+										</a>
+										<h6><a href="#">Privacy Protection</a></h6>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-users"></i>
+										</a>
+										<h6><a href="#">Any place</a></h6>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-certificate"></i>
+										</a>
+										<h6><a href="#">Instant Results</a></h6>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="single-achivement">
+										<a href="#" class="achivement-link">
+											<i class="fa fa-usd"></i>
+										</a>
+										<h6><a href="#">No Cost</a></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Achivement Area -->
+		<!-- Start Video Area -->
+		<section class="video-area">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="video-content">
+					<a href="https://www.youtube.com/watch?v=D9IAthofemE" class="play-btn"><img src="{{ url_for('static', filename='img/play-btn.png') }}" alt=""></a>
+					<h3 class="h2 text-white">Watch in Action</h3>
+				</div>
+			</div>
+		</section>
+		<!-- End Video Area -->
+		<!-- Start Skill Area -->
+		<section class="section-gap skill-area">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-5">
+						<div class="skill-content">
+							<h2>Chances of survival</h2>
+							<p class="mb-30">People around the world,  who are coughing are struggling to know whether they are COVID19 positive because they cannot get tested. Our solution should deliver a quick and easy way for users to record their coughing sound with their smartphone and have an app tell them if they (likely) have COVID-19 or not </p>
+							<a href="https://www.worldometers.info/coronavirus/" class="primary-btn">Source<span class="lnr lnr-arrow-right"></span></a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="total-progress-bar">
+							<p>Deteciton within 2 days</p>
+							<div class="single-progressbar mb-20">
+								<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<p>Detection within 5 days</p>
+							<div class="single-progressbar mb-20">
+								<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<p>Detection within 10 days</p>
+							<div class="single-progressbar mb-20">
+								<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<p>Detection within two weeks</p>
+							<div class="single-progressbar mb-20">
+								<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Skill Area -->
+		<!-- Start Carousel Area -->
+		<section class="section-gap carousel-area">
+			<div class="overlay overlay-bg"></div>
+			<div class="active-bottle-carousel">
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Team Member Name</h2>
+									<h5 class="text-white mb-20">Expertise</h5>
+									<p class="text-white mb-30">Some Introduction.</p>
+									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Team Member Name</h2>
+									<h5 class="text-white mb-20">Expertise</h5>
+									<p class="text-white mb-30">Some Introduction.</p>
+									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Team Member Name</h2>
+									<h5 class="text-white mb-20">Expertise</h5>
+									<p class="text-white mb-30">Some Introduction.</p>
+									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Team Member Name</h2>
+									<h5 class="text-white mb-20">Expertise</h5>
+									<p class="text-white mb-30">Some Introduction.</p>
+									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-6 col-md-4">
+								<div class="carousel-thumb">
+									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
+								</div>
+							</div>
+							<div class="col-xl-6 col-md-7">
+								<div class="carousel-content">
+									<h2 class="text-white">Team Member Name</h2>
+									<h5 class="text-white mb-20">Expertise</h5>
+									<p class="text-white mb-30">Some Introduction.</p>
+									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+		<!-- End Carousel Area -->
+
+		<!-- Start Contact Area -->
+		<section class="contact-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="single-address text-center">
+							<h6>Tests Diagnosed today</h6>
+							<h1 style="font-size: 50px;">10</h1>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-address text-center">
+							<h6>Positive cases</h6>
+							<h1 style="font-size: 50px;">5</h1>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-address text-center">
+							<h6>Critical Cases</h6>
+							<h1 style="font-size: 50px;">3</h1>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-address text-center">
+							<h6>Recovered</h6>
+							<h1 style="font-size: 50px;">2</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Contact Area -->
+
+		<!-- Start Subscription Area -->
+
+		<!-- End Subscription Area -->
+
+		<!-- Strat Footer Area -->
+		<footer class="section-gap footer-widget-area">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="subscription-area">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div id="mc_embed_signup">
+								<form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01" method="get" class="subscription relative">
+									<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required>
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
+									</div>
+									<button class="primary-btn">Receive updates<span class="lnr lnr-arrow-right"></span></button>
+									<div class="info"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h6 class="text-white text-uppercase mb-20">LifeStyle</h6>
+							<ul class="footer-nav">
+								<li><a href="#">Corona virus website 1</a></li>
+								<li><a href="#">Corona virus website 2</a></li>
+								<li><a href="#">Corona virus website 3</a></li>
+								<li><a href="#">Corona virus website 4</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h6 class="text-white text-uppercase mb-20">Recommendations</h6>
+							<ul class="footer-nav">
+								<li><a href="#">Corona virus website 1</a></li>
+								<li><a href="#">Corona virus website 2</a></li>
+								<li><a href="#">Corona virus website 3</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h6 class="text-white text-uppercase mb-20">Symptoms</h6>
+							<ul class="footer-nav">
+								<li><a href="#">Corona virus website 1</a></li>
+								<li><a href="#">Corona virus website 2</a></li>
+								<li><a href="#">Corona virus website 3</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h6 class="text-white text-uppercase mb-20">Instafeed</h6>
+							<ul class="instafeed d-flex flex-wrap">
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+					<p class="footer-text m-0">Copyright &copy; 2020 by DetectNow</p>
+					<div class="footer-social d-flex align-items-center">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-behance"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+		</div>
+
+		<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
