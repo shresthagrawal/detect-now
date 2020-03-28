@@ -1,5 +1,6 @@
 # Create a virtual env
 `virtualenv venv`
+
 `source venv/bin/activate`
 
 # Clone 
@@ -7,6 +8,7 @@
 
 # Install Dependencies
 `pip3 install -r ./App/requirements.txt`
+
 `pip3 install -r ./pyAudioAnalysis/requirements.txt`
 
 # Install
