@@ -1,3 +1,7 @@
+# Clone The repo
+`git clone https://github.com/shresthagrawal/covid19.git`
+`cd covid19`
+
 # Create a virtual env
 `virtualenv venv`
 
