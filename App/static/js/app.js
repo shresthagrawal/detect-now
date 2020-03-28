@@ -148,8 +148,12 @@ function createDownloadLink(blob) {
 	var upload = document.createElement('a');
 	upload.href="#";
 	upload.innerHTML = "Upload";
-	upload.style.cssText = "margin-left:40%"
-	upload.addEventListener("click", function(event){
+	upload.style.cssText = "margin-left:40%";
+
+	call_type = $("#call_type").val();
+
+	if (call_type == "prediction"){
+		upload.addEventListener("click", function(event){
 
 			var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
@@ -160,8 +164,68 @@ function createDownloadLink(blob) {
 		  };
 		  var fd=new FormData();
 		  fd.append("audio_data",blob, filename);
-		  fd.append("gender",$('#gender').val());
-		  fd.append("lungs",$('#lungs').val());
+
+
+			var l_gender = 'male';
+			$('input[name="gender"]:checked').each(function() {
+			   l_gender = this.value;
+			});
+
+
+
+			var l_lungs = 'no';
+			$('input[name="lungs"]:checked').each(function() {
+			   l_lungs = this.value;
+			});
+
+		  fd.append("gender",l_gender);
+		  fd.append("lungs",l_lungs);
+		  fd.append("weight",$('#weight').val());
+		  fd.append("height",$('#height').val());
+
+		   
+
+		  //fd.append("corona_test",$("#corona_test :selected").val());
+		  fd.append("country",$("#country :selected").val());
+
+		  fd.append("age",$("#age :selected").val());
+		  fd.append("temperature",$("#temperature :selected").val());
+		  
+
+		  xhr.open("POST","upload_test",true);
+		  xhr.send(fd);
+
+		  
+	})
+
+	}else{
+			upload.addEventListener("click", function(event){
+
+			var xhr=new XMLHttpRequest();
+		  xhr.onload=function(e) {
+		      if(this.readyState === 4) {
+		          console.log("Server returned: ",e.target.responseText);
+		          window.location.href = "./thanks";
+		      }
+		  };
+		  var fd=new FormData();
+		  fd.append("audio_data",blob, filename);
+
+
+			var l_gender = 'male';
+			$('input[name="gender"]:checked').each(function() {
+			   l_gender = this.value;
+			});
+
+
+
+			var l_lungs = 'no';
+			$('input[name="lungs"]:checked').each(function() {
+			   l_lungs = this.value;
+			});
+
+		  fd.append("gender",l_gender);
+		  fd.append("lungs",l_lungs);
 		  fd.append("weight",$('#weight').val());
 		  fd.append("height",$('#height').val());
 
@@ -179,6 +243,8 @@ function createDownloadLink(blob) {
 
 		  
 	})
+	}
+
 	li.appendChild(document.createTextNode (" "))//add a space in between
 	li.appendChild(upload)//add the upload link to li
 

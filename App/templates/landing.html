@@ -56,9 +56,10 @@
 					<div class="col-lg-6 col-md-7 col-sm-8">
 						<div class="banner-content">
 							<h1>DetectNow</h1>
-							<p>Early-stage diagnosis of Corona Virus with high accuracy at zero cost.</p>
+							<p style="margin-bottom: 10px">Early-stage diagnosis of Corona Virus with high accuracy at zero cost.</p>
+							<h4 style="margin-bottom: 50px">Collected samples: {{record_count}}</h4>
 							<a href="./sample" class="primary-btn">Record Sample<span class="lnr lnr-arrow-right"></span></a>
-							<a href="./test" class="primary-btn">Test Sample<span class="lnr lnr-arrow-right"></span></a>
+							<a href="./test" class="primary-btn" >Test Sample<span class="lnr lnr-arrow-right"></span></a>
 						</div>
 					</div>
 					<div class="col-lg-5 col-md-5 col-sm-4">
@@ -163,7 +164,7 @@
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="video-content">
-					<a href="https://www.youtube.com/watch?v=D9IAthofemE" class="play-btn"><img src="{{ url_for('static', filename='img/play-btn.png') }}" alt=""></a>
+					<a href="https://www.youtube.com/watch?v=z20vsYuAxLw&feature=emb_logo" class="play-btn"><img src="{{ url_for('static', filename='img/play-btn.png') }}" alt=""></a>
 					<h3 class="h2 text-white">Watch in Action</h3>
 				</div>
 			</div>
@@ -204,143 +205,9 @@
 			</div>
 		</section>
 		<!-- End Skill Area -->
-		<!-- Start Carousel Area -->
-		<section class="section-gap carousel-area">
-			<div class="overlay overlay-bg"></div>
-			<div class="active-bottle-carousel">
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Team Member Name</h2>
-									<h5 class="text-white mb-20">Expertise</h5>
-									<p class="text-white mb-30">Some Introduction.</p>
-									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Team Member Name</h2>
-									<h5 class="text-white mb-20">Expertise</h5>
-									<p class="text-white mb-30">Some Introduction.</p>
-									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Team Member Name</h2>
-									<h5 class="text-white mb-20">Expertise</h5>
-									<p class="text-white mb-30">Some Introduction.</p>
-									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Team Member Name</h2>
-									<h5 class="text-white mb-20">Expertise</h5>
-									<p class="text-white mb-30">Some Introduction.</p>
-									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-xl-6 col-md-4">
-								<div class="carousel-thumb">
-									<img src="{{ url_for('static', filename='img/c.jpg') }}" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-7">
-								<div class="carousel-content">
-									<h2 class="text-white">Team Member Name</h2>
-									<h5 class="text-white mb-20">Expertise</h5>
-									<p class="text-white mb-30">Some Introduction.</p>
-									<a href="#" class="primary-btn white">Get in touch<span class="lnr lnr-arrow-right"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		
 
 
-			</div>
-		</section>
-		<!-- End Carousel Area -->
-
-		<!-- Start Contact Area -->
-		<section class="contact-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6">
-						<div class="single-address text-center">
-							<h6>Tests Diagnosed today</h6>
-							<h1 style="font-size: 50px;">10</h1>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="single-address text-center">
-							<h6>Positive cases</h6>
-							<h1 style="font-size: 50px;">5</h1>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="single-address text-center">
-							<h6>Critical Cases</h6>
-							<h1 style="font-size: 50px;">3</h1>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="single-address text-center">
-							<h6>Recovered</h6>
-							<h1 style="font-size: 50px;">2</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Contact Area -->
 
 		<!-- Start Subscription Area -->
 
@@ -369,51 +236,37 @@
 				<div class="row">
 					<div class="col-lg-3 col-sm-6">
 						<div class="single-footer-widget">
-							<h6 class="text-white text-uppercase mb-20">LifeStyle</h6>
+							<h6 class="text-white text-uppercase mb-20">Useful info:</h6>
 							<ul class="footer-nav">
-								<li><a href="#">Corona virus website 1</a></li>
-								<li><a href="#">Corona virus website 2</a></li>
-								<li><a href="#">Corona virus website 3</a></li>
-								<li><a href="#">Corona virus website 4</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-symptoms/">Symptoms</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-incubation-period/">Incubation Period</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-death-rate/">Mortality rate</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Age, Sex, and existing conditions of Deaths</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6">
 						<div class="single-footer-widget">
-							<h6 class="text-white text-uppercase mb-20">Recommendations</h6>
+							<h6 class="text-white text-uppercase mb-20">Coronavirus stats</h6>
 							<ul class="footer-nav">
-								<li><a href="#">Corona virus website 1</a></li>
-								<li><a href="#">Corona virus website 2</a></li>
-								<li><a href="#">Corona virus website 3</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/">Coronavirus update</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-cases/">Case statistics and graphs</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-death-toll/">Death Statistics and graphs</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6">
 						<div class="single-footer-widget">
-							<h6 class="text-white text-uppercase mb-20">Symptoms</h6>
+							<h6 class="text-white text-uppercase mb-20">More info</h6>
 							<ul class="footer-nav">
-								<li><a href="#">Corona virus website 1</a></li>
-								<li><a href="#">Corona virus website 2</a></li>
-								<li><a href="#">Corona virus website 3</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-death-rate/">Mortality Rate</a></li>
+								<li><a href="https://www.worldometers.info/coronavirus/coronavirus-symptoms/">China’s Xi Jinping pledges </a></li>
+								<li><a href="https://www.ft.com/content/cc2be982-417d-11ea-bdb5-169ba7be433d">Corona virus website 3</a></li>
 							</ul>
 						</div>
 					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<div class="single-footer-widget">
-							<h6 class="text-white text-uppercase mb-20">Instafeed</h6>
-							<ul class="instafeed d-flex flex-wrap">
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-								<li><img src="{{ url_for('static', filename='img/i1.jpg') }}" alt=""></li>
-							</ul>
-						</div>
-					</div>
+					
 				</div>
 				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 					<p class="footer-text m-0">Copyright &copy; 2020 by DetectNow</p>
@@ -428,7 +281,8 @@
 		</footer>
 		<!-- End Footer Area -->
 
-		<link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#edfdfa","text":"#000000","border":"#5ec2b6"},"button":{"background":"#5ec2b6","text":"#ffffff"}},"position":"bottom","content":{"href":"https://docs.google.com/document/d/1b2rm8gAnROrNaQ0xG1GOgsJI74rfh18C6dm0D28Npkw/edit?usp=sharing","message":"We ensure anonymous collection of data, link to our data protection is"}})});</script>
+		<link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#f6f6f6","text":"#000000","border":"#555555"},"button":{"background":"#555555","text":"#ffffff"}},"position":"bottom","content":{"href":"https://docs.google.com/document/d/e/2PACX-1vQhSBtFz2WzqIFGd8YqynMt-It1HPYQZnBZ6cqwFNfqIHuUUeKhKTiEFaLF3n_77U5A_8XedGYXQ3I-/pub","message":"We ensure anonymous collection of data, link to our data protection is"}})});</script>
+
 		</div>
 
 		<script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>

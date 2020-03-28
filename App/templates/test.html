@@ -70,15 +70,6 @@
 
                
 
-              <div class="form-group">
-                    <label for="corona_test">Corona Diagnosis</label>
-                    <select class="form-control selectpicker" id="corona_test">
-                      <option value="healthy">Healthy</option>
-                      <option value="early">Tested Positive for COVID-19</option>
-                      <option value="critical">Tested Negative for COVID-19</option>
-                    </select>
-                  </div>
-
                 <div class="form-group">
                     <label for="gender">Gender </label>
                       <div class="form-check form-check-inline" style="margin-left: 5px">
@@ -94,6 +85,8 @@
                           <label class="form-check-label" for="inlineRadio3">Other</label>
                         </div>
                   </div>
+
+                   <input type="hidden" id="call_type" name="call_type" value="prediction">
 
                   <div class="form-group">
                     <label for="lungs">Any lungs diseases </label>

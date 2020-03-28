@@ -73,9 +73,10 @@
               <div class="form-group">
                     <label for="corona_test">Corona Diagnosis</label>
                     <select class="form-control selectpicker" id="corona_test">
-                      <option value="healthy">Healthy</option>
-                      <option value="early">Tested Positive for COVID-19</option>
-                      <option value="critical">Tested Negative for COVID-19</option>
+                      <option value="positive">Tested Positive for COVID-19</option>
+                      <option value="negaitve">Tested Negative for COVID-19</option>
+                      <option value="not_tested">Not Tested</option>
+                      <option value="waiting_for_result">Waiting for results</option>
                     </select>
                   </div>
 
@@ -83,42 +84,43 @@
                     <label for="gender">Gender </label>
                       <div class="form-check form-check-inline" style="margin-left: 5px">
                           <input class="form-check-input" type="radio" name="gender" id="gender" value="female" checked>
-                          <label class="form-check-label" for="inlineRadio1">Female</label>
+                          <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Female</label>
                         </div>
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
-                          <label class="form-check-label" for="inlineRadio2">Male</label>
+                          <label class="form-check-label" for="inlineRadio2"  style="margin-left: 3px">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="gender" id="gender" value="other">
-                          <label class="form-check-label" for="inlineRadio3">Other</label>
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                          <label class="form-check-label" for="inlineRadio3"  style="margin-left: 3px">Other</label>
                         </div>
                   </div>
+                  <input type="hidden" id="call_type" name="call_type" value="train">
 
                   <div class="form-group">
                     <label for="lungs">Any lungs diseases </label>
                       <div class="form-check form-check-inline" style="margin-left: 5px">
                           <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes" checked>
-                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                          <label class="form-check-label" for="inlineRadio1"  style="margin-left: 3px">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
-                          <label class="form-check-label" for="inlineRadio2">No</label>
+                          <label class="form-check-label" for="inlineRadio2"  style="margin-left: 3px">No</label>
                         </div>
                   </div>
 
                     <div class="form-group">
-                    <label for="country" >Your Ethnicity </label>
+                    <label for="country" >Country of origin </label>
                       <select class="selectpicker countrypicker" data-live-search="true" id="country" ></select>                      
                   </div>
 
                   <div class="form-group">
                     <label for="age" style="margin-top: 10px">Age Group</label>
                     <select class="form-control selectpicker" id="age">
-                      <option value="13.30">13 - 30</option>
-                      <option value="31.45">31 - 45</option>
-                      <option value="46.80">46 - 80</option>
-                      <option value="80.99">Above 80</option>
+                      <option value="24">18 - 30</option>
+                      <option value="35">31 - 40</option>
+                      <option value="45">41 - 55</option>
+                      <option value="65">Above 55</option>
                     </select>
                   </div>
 
@@ -126,9 +128,8 @@
                   <div class="form-group">
                     <label for="temperature">Body Temperature</label>
                      <select class="form-control selectpicker" id="temperature">
-                      <option value="33.40">33°C - 40°C</option>
-                      <option value="41.45">41°C - 45°C</option>
-                      <option value="43.99">Above 42°C</option>
+                      <option value="no">35°C/95°F - 37.9°C/100°F</option>
+                      <option value="yes">Above 38°C/101°F</option>
                       <option value="na">I don't know</option>
                     </select>
                   </div>
@@ -138,7 +139,7 @@
                       <input type="number" class="form-control" placeholder="Weight (KG)" id = 'weight'>
                     </div>
                     <div class="col">
-                      <input type="number" class="form-control" placeholder="Height" id = 'height'>
+                      <input type="number" class="form-control" placeholder="Height (CM)" id = 'height'>
                     </div>
                   </div>
                                   
