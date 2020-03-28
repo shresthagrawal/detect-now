@@ -1,3 +1,6 @@
 __pycache__
 App/upload
 .DS_Store
+venv
+pyAudioAnalysis
+.localized

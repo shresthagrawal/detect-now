@@ -9,3 +9,5 @@ Werkzeug==0.16.0
 pytz==2019.1
 requests==2.22.0
 pandas
+python-magic-bin==0.4.14
+tqdm
