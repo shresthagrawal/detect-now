@@ -51,12 +51,12 @@ def fn_upload():
 
 	return '200'
 
-def classify(fileloc, location):
+def classify(fileloc, location, gender, age):
 	_, res, label = aT.file_classification(fileloc, "model/model", "randomforest")
-	return (0.2 * detect(location)) + (0.8 * res[1])
+	return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
 
 
 if __name__ == '__main__':
 	  app.run( port=8081, debug=True)
 	  # Test Call
-	  # print(classify('data/cough_validate/not_sick/audioset__-fsiDpnxeE_225_230.wav', 'Australia'))
+	  # print(classify('data/cough_validate/sick/audioset_-CwXrwgVffM_35_40.wav', 'Australia', 'male', 70))
