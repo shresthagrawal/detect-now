@@ -25,6 +25,7 @@ def fn_upload():
 	if request.method == 'POST':
 		age = request.form.get("age",'na')
 		gender = request.form.get("gender",'na')
+		country = request.form.get("country",'na')
 		temperature = request.form.get("temperature",'na')
 		corona_test = request.form.get("corona_test",'na')
 		if 'audio_data' not in request.files:
@@ -34,7 +35,7 @@ def fn_upload():
 		file = request.files['audio_data']
 		ts = int(time.time())
 
-		filename = corona_test + '_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.mp3'
+		filename = country +'_'+corona_test + '_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.mp3'
 		file.save(os.path.join('upload', filename))
 
 		print(file.filename)

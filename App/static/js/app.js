@@ -163,6 +163,7 @@ function createDownloadLink(blob) {
 		  fd.append("audio_data",blob, filename);
 		  fd.append("gender",$("#gender :selected").text());
 		  fd.append("corona_test",$("#corona_test :selected").text());
+		  fd.append("country",$("#country :selected").text());
 
 		  fd.append("age",$('#age').val());
 		  fd.append("temperature",$('#temperature').val());

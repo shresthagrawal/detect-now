@@ -68,14 +68,11 @@
 
               <h4 style="margin-bottom: 10px" for="recorrding">Please record details below</h4>
 
-               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="consent">
-                <label class="form-check-label" for="consent"> &nbsp; I consent sharing of my data</label>
-              </div>
+               
 
               <div class="form-group">
                     <label for="corona_test">Corona Diagnosis</label>
-                    <select class="form-control" id="corona_test">
+                    <select class="form-control selectpicker" id="corona_test">
                       <option value="healthy">Healthy</option>
                       <option value="early">Diagnosed</option>
                       <option value="critical">Critical</option>
@@ -83,8 +80,8 @@
                   </div>
 
                 <div class="form-group">
-                    <label for="gender" style="margin-top: 10px">Gender </label>
-                    <select class="form-control" id="gender">
+                    <label for="gender">Gender </label>
+                    <select class="form-control selectpicker" id="gender">
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                       <option value="other">Other</option>
@@ -93,7 +90,7 @@
                   </div>
 
                     <div class="form-group">
-                    <label for="country" style="margin-top: 10px">Country </label>
+                    <label for="country" >Country </label>
                       <select class="selectpicker countrypicker" data-live-search="true" id="country" ></select>                      
                   </div>
 
@@ -107,7 +104,10 @@
                     <label for="temperature">Body Temperature °C</label>
                     <input type="number" class="form-control" id="temperature" placeholder="please enter your temperature">
                   </div>
-
+                  <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="consent">
+                <label class="form-check-label" for="consent"> &nbsp; I consent sharing of my data</label>
+              </div>
                   
 
 
@@ -119,7 +119,6 @@
                      <button id="stopButton" disabled>Stop</button>
                     </div>
                     <div id="formats">Format: start recording to see sample rate</div>
-                    <p><strong>Recordings:</strong></p>
                     <ol id="recordingsList"></ol>
 
                      </div>
