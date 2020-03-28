@@ -15,6 +15,8 @@
 
 `pip3 install -r ./pyAudioAnalysis/requirements.txt`
 
+`brew install ffmpeg`
+
 # Install
 `pip3 install -e pyAudioAnalysis`
 
