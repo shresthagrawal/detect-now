@@ -1,5 +1,6 @@
 __pycache__
-App/upload
+Data/uploads/not_sick/*.wav
+Data/uploads/sick/*.wav
 .DS_Store
 venv
 pyAudioAnalysis

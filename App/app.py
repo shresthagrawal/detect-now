@@ -37,8 +37,11 @@ def fn_upload():
 		file = request.files['audio_data']
 		ts = int(time.time())
 
-		filename = country +'_'+corona_test + '_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.wav'
-		file.save(os.path.join('upload', filename))
+		filename = country +'_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.wav'
+		if corona_test == 'Healthy':
+			file.save(os.path.join('data/uploads/not_sick', filename))
+		else:
+			file.save(os.path.join('data/uploads/sick', filename))
 
 		print(file.filename)
 

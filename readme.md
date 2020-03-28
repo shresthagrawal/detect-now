@@ -23,8 +23,11 @@
 # Using Test.py
 `python3 App/app.py`
 
-# Training
+# Training on the original dataset
 `python3 pyAudioAnalysis/pyAudioAnalysis/audioAnalysis.py trainClassifier -i data/cough/not_sick data/cough/sick --method randomforest -o model_new`
+
+#Training on Uploads
+`python3 pyAudioAnalysis/pyAudioAnalysis/audioAnalysis.py trainClassifier -i data/uploads/not_sick data/uploads/sick --method randomforest -o model/model_new`
 
 # Training Dataset
 [data-set](https://osf.io/4pt2s/)
