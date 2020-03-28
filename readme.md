@@ -25,6 +25,7 @@
 
 # Alternative
 `chmod +x ./auto.sh`
+
 `./auto.sh`
 
 # Training on the original dataset
