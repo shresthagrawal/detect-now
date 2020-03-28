@@ -1,6 +1,7 @@
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
+from region_classification import detect
 import time
 
 app = Flask(__name__)
@@ -42,5 +43,11 @@ def fn_upload():
 
 	return '200'
 
+def classify(fileloc, location):
+	return detect(location)
+
+
 if __name__ == '__main__':
 	  app.run( port=8081, debug=True)
+	  # Test Call
+	  # print(classify('../data/cough_test/not_sick/', 'Australia'))
