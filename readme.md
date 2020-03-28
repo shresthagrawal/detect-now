@@ -24,8 +24,8 @@
 `python3 App/app.py`
 
 # Alternative
-chmod +x ./auto.sh
-./auto.sh
+`chmod +x ./auto.sh`
+`./auto.sh`
 
 # Training on the original dataset
 `python3 pyAudioAnalysis/pyAudioAnalysis/audioAnalysis.py trainClassifier -i data/cough/not_sick data/cough/sick --method randomforest -o model_new`
