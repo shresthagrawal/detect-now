@@ -36,7 +36,7 @@ def fn_upload():
 		file = request.files['audio_data']
 		ts = int(time.time())
 
-		filename = country +'_'+corona_test + '_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.mp3'
+		filename = country +'_'+corona_test + '_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.wav'
 		file.save(os.path.join('upload', filename))
 
 		print(file.filename)
