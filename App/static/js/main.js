@@ -22,23 +22,10 @@ $(document).ready(function(){
         $(".main-menu").addClass('mobile-menu');
     });
      
-    $('select').niceSelect();
-    $('.img-pop-up').magnificPopup({
-        type: 'image',
-        gallery:{
-        enabled:true
-        }
-    });
+    //$('select').niceSelect();
+    
 
-    $('.active-bottle-carousel').owlCarousel({
-        items:1,
-        loop:true,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:true
-    });
-
+    
     $('.play-btn').magnificPopup({
         disableOn: 700,
         type: 'iframe',

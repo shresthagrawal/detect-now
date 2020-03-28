@@ -30,6 +30,10 @@ def fn_upload():
 		country = request.form.get("country",'na')
 		temperature = request.form.get("temperature",'na')
 		corona_test = request.form.get("corona_test",'na')
+		weight = request.form.get("weight",'na')
+		height = request.form.get("height",'na')
+
+		lungs = request.form.get("lungs",'na')
 		if 'audio_data' not in request.files:
 			flash('No file part')
 			return '400'
@@ -37,7 +41,7 @@ def fn_upload():
 		file = request.files['audio_data']
 		ts = int(time.time())
 
-		filename = country +'_' + temperature + '_' +gender + '_' +age + '_' + str(ts) + '.wav'
+		filename = country +'_'+corona_test + '_' + temperature +'_' +lungs +'_' + height + '_' + weight + '_' +gender + '_' +age + '_' + str(ts) + '.wav'
 		if corona_test == 'Healthy':
 			file.save(os.path.join('data/uploads/not_sick', filename))
 		else:

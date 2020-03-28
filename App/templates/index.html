@@ -74,46 +74,80 @@
                     <label for="corona_test">Corona Diagnosis</label>
                     <select class="form-control selectpicker" id="corona_test">
                       <option value="healthy">Healthy</option>
-                      <option value="early">Diagnosed</option>
-                      <option value="critical">Critical</option>
+                      <option value="early">Tested Positive for COVID-19</option>
+                      <option value="critical">Tested Negative for COVID-19</option>
                     </select>
                   </div>
 
                 <div class="form-group">
                     <label for="gender">Gender </label>
-                    <select class="form-control selectpicker" id="gender">
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                      <option value="not_to_disclose">Not to disclose</option>
-                    </select>
+                      <div class="form-check form-check-inline" style="margin-left: 5px">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="female" checked>
+                          <label class="form-check-label" for="inlineRadio1">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                          <label class="form-check-label" for="inlineRadio2">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="other">
+                          <label class="form-check-label" for="inlineRadio3">Other</label>
+                        </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lungs">Any lungs diseases </label>
+                      <div class="form-check form-check-inline" style="margin-left: 5px">
+                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes" checked>
+                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
                   </div>
 
                     <div class="form-group">
-                    <label for="country" >Country </label>
+                    <label for="country" >Your Ethnicity </label>
                       <select class="selectpicker countrypicker" data-live-search="true" id="country" ></select>                      
                   </div>
 
                   <div class="form-group">
-                    <label for="age" style="margin-top: 10px">Age</label>
-                    <input type="number" class="form-control" id="age" placeholder="please enter your age">
+                    <label for="age" style="margin-top: 10px">Age Group</label>
+                    <select class="form-control selectpicker" id="age">
+                      <option value="13.30">13 - 30</option>
+                      <option value="31.45">31 - 45</option>
+                      <option value="46.80">46 - 80</option>
+                      <option value="80.99">Above 80</option>
+                    </select>
                   </div>
 
 
                   <div class="form-group">
-                    <label for="temperature">Body Temperature °C</label>
-                    <input type="number" class="form-control" id="temperature" placeholder="please enter your temperature">
+                    <label for="temperature">Body Temperature</label>
+                     <select class="form-control selectpicker" id="temperature">
+                      <option value="33.40">33°C - 40°C</option>
+                      <option value="41.45">41°C - 45°C</option>
+                      <option value="43.99">Above 42°C</option>
+                      <option value="na">I don't know</option>
+                    </select>
                   </div>
-                  <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="consent">
-                <label class="form-check-label" for="consent"> &nbsp; I consent sharing of my data</label>
-              </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" placeholder="Weight (KG)" id = 'weight'>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" placeholder="Height" id = 'height'>
+                    </div>
+                  </div>
+                                  
                   
 
 
-                  <div class="form-group">
-                  <label for="recorrding">Please record your cough now</label>
-                    <div id="controls" id = "recorrding">
+                  <div class="form-group" style="margin-top: 10px">
+                  <label for="recorrding">Please record long cough</label>
+                    <div id="controls" id = "recorrding" style="margin-top: 0">
                      <button id="recordButton">Record</button>
                      <button id="pauseButton" disabled>Pause</button>
                      <button id="stopButton" disabled>Stop</button>
@@ -132,7 +166,12 @@
     </section>
     <!-- End Banner Area -->
 
-
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', (event) => {
+      //the event occurred
+      $('select').selectpicker();
+    })
+    </script>
    
    
     </div>
@@ -142,7 +181,6 @@
     <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>

@@ -151,7 +151,6 @@ function createDownloadLink(blob) {
 	upload.style.cssText = "margin-left:40%"
 	upload.addEventListener("click", function(event){
 
-		if ($('#consent').is(':checked')){
 			var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
@@ -161,19 +160,23 @@ function createDownloadLink(blob) {
 		  };
 		  var fd=new FormData();
 		  fd.append("audio_data",blob, filename);
-		  fd.append("gender",$("#gender :selected").text());
-		  fd.append("corona_test",$("#corona_test :selected").text());
-		  fd.append("country",$("#country :selected").text());
+		  fd.append("gender",$('#gender').val());
+		  fd.append("lungs",$('#lungs').val());
+		  fd.append("weight",$('#weight').val());
+		  fd.append("height",$('#height').val());
 
-		  fd.append("age",$('#age').val());
-		  fd.append("temperature",$('#temperature').val());
+		   
+
+		  fd.append("corona_test",$("#corona_test :selected").val());
+		  fd.append("country",$("#country :selected").val());
+
+		  fd.append("age",$("#age :selected").val());
+		  fd.append("temperature",$("#temperature :selected").val());
 		  
 
 		  xhr.open("POST","upload",true);
 		  xhr.send(fd);
-		}else{
-			alert('Please specify your consent')
-		}
+
 		  
 	})
 	li.appendChild(document.createTextNode (" "))//add a space in between
