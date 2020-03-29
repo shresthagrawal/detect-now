@@ -42,7 +42,6 @@ def fn_upload_test():
 		request.form.get("gender",'na'),
 		24
 		)
-	print(request.form.get("gender",'na'), request.form.get("country",'na'))
 	return json.dumps({'result': res})
 
 def upload_save(request, tmp):
@@ -79,8 +78,9 @@ def upload_save(request, tmp):
 
 def classify(fileloc, location, gender, age):
 	_, res, label = aT.file_classification(fileloc, "model/model", "randomforest")
-	print(detect(location, gender, age))
-	return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
+	print(detect(location, gender, age), res[1])
+	# return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
+	return res[1]
 
 
 if __name__ == '__main__':

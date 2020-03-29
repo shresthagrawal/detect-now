@@ -137,6 +137,7 @@ if (call_type == "prediction"){
 		      if(this.readyState === 4) {
 		          console.log("Server returned: ",e.target.responseText);
 		          outcome = JSON.parse(this.responseText)['result']
+		          console.log(outcome)
 		          outcome_test = ""
 		          if (outcome < 10){
 		          	outcome_test = "positive"
@@ -144,7 +145,7 @@ if (call_type == "prediction"){
 		          	outcome_test = "negative"
 		          }
 
-		          output_text = "You are identified as " + outcome_test + "for COVID 19, with probability " + Math.round(outcome) + "."
+		          output_text = "You are identified as " + outcome_test + "for COVID 19, with probability " + outcome + "."
 		          swal("DetectNow Prediction!", output_text);
 		          //window.location.href = "./thanks";
 		      }
