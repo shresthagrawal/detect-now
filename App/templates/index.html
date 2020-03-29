@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
+
 <head>
-  <!-- Mobile Specific Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="img/fav.png">
-  <!-- Author Meta -->
-  <meta name="author" content="CodePixar">
-  <!-- Meta Description -->
-  <meta name="description" content="">
-  <!-- Meta Keyword -->
-  <meta name="keywords" content="">
-  <!-- meta character set -->
-  <meta charset="UTF-8">
-  <!-- Site Title -->
-  <title>DetectNow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>DetectNow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
     <!--
     CSS
     ============================================= -->
@@ -29,154 +30,147 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select-country.min.css') }}" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css" />
+</head>
 
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select-country.min.css') }}" />
-
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css" />
-
-  </head>
-  <body class="dup-body">
+<body class="dup-body">
     <div class="dup-body-wrap">
-      <!-- Start Header Area -->
-      <header class="default-header">
-        <div class="header-wrap">
-          <div class="header-top d-flex justify-content-between align-items-center">
-            <div class="logo">
-              <a href="./"><img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 80px" alt=""></a>
-            </div>
-            <div class="main-menubar d-flex align-items-center">
-              <nav class="hide">
-                <a href="./">Home</a>
-                
-              </nav>
-              <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-            </div>
-          </div>
-        </div>
-      </header>
-    <!-- End Header Area -->
-    <!-- Start Banner Area -->
-    <section class="banner-area relative">
-      <div class="overlay overlay-bg"></div>
-      <div class="container">
-        <div class="row fullscreen align-items-center justify-content-between">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="banner-content" style="margin-top: 0">
-
-
-              <h4 style="margin-bottom: 10px" for="recorrding">Please record details below</h4>
-
-               
-
-              <div class="form-group">
-                    <label for="corona_test">Corona Diagnosis</label>
-                    <select class="form-control selectpicker" id="corona_test">
-                      <option value="positive">Tested Positive for COVID-19</option>
-                      <option value="negaitve">Tested Negative for COVID-19</option>
-                      <option value="not_tested">Not Tested</option>
-                      <option value="waiting_for_result">Waiting for results</option>
-                    </select>
-                  </div>
-
-                <div class="form-group">
-                    <label for="gender">Gender </label>
-                      <div class="form-check form-check-inline" style="margin-left: 5px">
-                          <input class="form-check-input" type="radio" name="gender" id="gender" value="female" checked>
-                          <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Female</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
-                          <label class="form-check-label" for="inlineRadio2"  style="margin-left: 3px">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
-                          <label class="form-check-label" for="inlineRadio3"  style="margin-left: 3px">Other</label>
-                        </div>
-                  </div>
-                  <input type="hidden" id="call_type" name="call_type" value="train">
-
-                  <div class="form-group">
-                    <label for="lungs">Any lungs diseases </label>
-                      <div class="form-check form-check-inline" style="margin-left: 5px">
-                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes" checked>
-                          <label class="form-check-label" for="inlineRadio1"  style="margin-left: 3px">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
-                          <label class="form-check-label" for="inlineRadio2"  style="margin-left: 3px">No</label>
-                        </div>
-                  </div>
-
-                    <div class="form-group">
-                    <label for="country" >Country of origin </label>
-                      <select class="selectpicker countrypicker" data-live-search="true" id="country" ></select>                      
-                  </div>
-
-                  <div class="form-group">
-                    <label for="age" style="margin-top: 10px">Age Group</label>
-                    <select class="form-control selectpicker" id="age">
-                      <option value="24">18 - 30</option>
-                      <option value="35">31 - 40</option>
-                      <option value="45">41 - 55</option>
-                      <option value="65">Above 55</option>
-                    </select>
-                  </div>
-
-
-                  <div class="form-group">
-                    <label for="temperature">Body Temperature</label>
-                     <select class="form-control selectpicker" id="temperature">
-                      <option value="no">35°C/95°F - 37.9°C/100°F</option>
-                      <option value="yes">Above 38°C/101°F</option>
-                      <option value="na">I don't know</option>
-                    </select>
-                  </div>
-
-                  <div class="row">
-                    <div class="col">
-                      <input type="number" class="form-control" placeholder="Weight (KG)" id = 'weight'>
+        <!-- Start Header Area -->
+        <header class="default-header">
+            <div class="header-wrap">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <a href="./"><img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 80px" alt=""></a>
                     </div>
-                    <div class="col">
-                      <input type="number" class="form-control" placeholder="Height (CM)" id = 'height'>
+                    <div class="main-menubar d-flex align-items-center">
+                        <nav class="hide">
+                            <a href="./">Home</a>
+                        </nav>
+                        <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
                     </div>
-                  </div>
-                                  
-                  
-
-
-                  <div class="form-group" style="margin-top: 10px">
-                  <label for="recorrding">Please record long cough</label>
-                    <div id="controls" id = "recorrding" style="margin-top: 0">
-                     <button id="recordButton">Record</button>
-                     <button id="pauseButton" disabled>Pause</button>
-                     <button id="stopButton" disabled>Stop</button>
-                    </div>
-                    <div id="formats">Format: start recording to see sample rate</div>
-                    <ol id="recordingsList"></ol>
-
-                     </div>
-
-
+                </div>
             </div>
-          </div>
+        </header>
+        <!-- End Header Area -->
+        <!-- Start Banner Area -->
+        <section class="banner-area relative">
+            <div class="overlay overlay-bg"></div>
+            <div class="container">
+                <div class="row fullscreen align-items-center justify-content-between">
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="banner-content" style="margin-top: 0">
+                            <h4 style="margin-bottom: 10px" for="recorrding">Please record details below</h4>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" id="corona_test">
+                                    <option value="default" selected="selected" disabled>COVID-19 diagnosis </option>
+                                    <option value="positive">Positive</option>
+                                    <option value="negaitve">Negative</option>
+                                    <option value="not_tested">Not Tested</option>
+                                    <option value="waiting_for_result">Waiting for results</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-top: 10px">
+                                <label for="recorrding">Please record your cough</label>
+                                <div id="controls" id="recorrding" style="margin-top: 0">
+                                    <button id="recordButton">Record</button>
+                                    <button id="stopButton" disabled>&nbsp;Stop&nbsp;</button>
+                                </div>
+                                <ol id="recordingsList"></ol>
+                            </div>
 
-        </div>
-      </div>
-    </section>
-    <!-- End Banner Area -->
-
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', (event) => {
-      //the event occurred
-      $('select').selectpicker();
-    })
-    </script>
-   
-   
+                            <h4 style="margin-bottom: 10px" for="recorrding">Optional</h4>
+                            <div class="form-group">
+                                <label for="gender">Gender </label>
+                                <div class="form-check form-check-inline" style="margin-left: 5px">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                                    <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                                    <label class="form-check-label" for="inlineRadio2" style="margin-left: 3px">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                                    <label class="form-check-label" for="inlineRadio3" style="margin-left: 3px">Other</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lungs">Any lung conditions </label>
+                                <div class="form-check form-check-inline" style="margin-left: 5px">
+                                    <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes">
+                                    <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
+                                    <label class="form-check-label" for="inlineRadio2" style="margin-left: 3px">No</label>
+                                </div>
+                            </div>
+                            <input type="hidden" id="call_type" name="call_type" value="training">
+                            <div class="form-group">
+                                <select class="selectpicker countrypicker" data-live-search="true" id="country" title="Country of origin">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" id="age">
+                                    <option value="default" selected="selected" disabled>Age Group </option>
+                                    <option value="24">18 - 30</option>
+                                    <option value="35">31 - 40</option>
+                                    <option value="45">41 - 55</option>
+                                    <option value="65">Above 55</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" id="temperature">
+                                    <option value="default" selected="selected" disabled>Body Temperature</option>
+                                    <option value="no">35°C/95°F - 37.9°C/100°F</option>
+                                    <option value="yes">Above 38°C/101°F</option>
+                                    <option value="na">I don't know</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" id="weight">
+                                    <option value="default" selected="selected" disabled>Weight Range</option>
+                                    <option value="45">under 45kg/100lbs</option>
+                                    <option value="55">45kg/100lbs - 65kg/143lbs</option>
+                                    <option value="75">65kg/143lbs - 85kg/187lbs</option>
+                                    <option value="95">85kg/187lbs - 105kg/231lbs</option>
+                                    <option value="110">Above</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" id="height">
+                                    <option value="default" selected="selected" disabled>Height Range</option>
+                                    <option value="150">less than 150cm/4ft'11in</option>
+                                    <option value="163">150cm/4ft'11in -165cm/5ft'5in</option>
+                                    <option value="170">165cm/5ft'5in -175cm/5ft'8in</option>
+                                    <option value="180">175cm/5ft'8in -185cm/6ft'0in</option>
+                                    <option value="190">Above</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-block" style="font-size: 16px" disabled id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Banner Area -->
+        <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css" />
+        <script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script>
+        <script>
+        window.addEventListener("load", function() { window.wpcc.init({ "border": "thin", "corners": "small", "colors": { "popup": { "background": "#222222", "text": "#ffffff", "border": "#fde296" }, "button": { "background": "#fde296", "text": "#000000" } }, "position": "top", "content": { "href": "https://docs.google.com/document/d/e/2PACX-1vQhSBtFz2WzqIFGd8YqynMt-It1HPYQZnBZ6cqwFNfqIHuUUeKhKTiEFaLF3n_77U5A_8XedGYXQ3I-/pub", "message": "To make sure your privacy, we collect data anonymously and are not storing any user personal details, We are training our algorithm to detect COVID-19 from coughing voice samples. However, we are not allowed to do diagnostics without a clinical trial. The result you will currently see is therefore purely fictional and does not provide a medical prediction. Please still provide real data, so we can move forward with the clinical trials as soon as possible. " } }) });
+        </script>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', (event) => {
+            //the event occurred
+            $('select').selectpicker();
+            $('.countrypicker').css('width', '100%');
+        })
+        </script>
     </div>
-
     <script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
@@ -185,14 +179,12 @@
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-      <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/bootstrap-select-country.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select-country.min.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</body>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-  </body>
 </html>

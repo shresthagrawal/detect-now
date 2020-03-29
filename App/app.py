@@ -77,9 +77,10 @@ def upload_save(request, tmp):
 
 
 def classify(fileloc, location, gender, age):
-	print(fileloc)
 	_, res, label = aT.file_classification(fileloc, "model/model", "randomforest")
-	return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
+	print(detect(location, gender, age), res[1])
+	# return (0.2 * detect(location, gender, age)) + (0.8 * res[1])
+	return res[1]
 
 
 if __name__ == '__main__':
