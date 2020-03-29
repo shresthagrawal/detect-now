@@ -8,8 +8,8 @@ popul = np.array(pd.read_csv('data/population.csv'))
 length = len(popul[0])
 
 gend = {}
-gend['male'] = 1.07
-gend['female'] = 0.93
+gend['male'] = 107/101
+gend['female'] = 93/99
 
 a = {} #num of infected
 for x in data:
@@ -19,7 +19,7 @@ for x in data:
 
 b = {} #population
 for x in popul:
-    b[x[0]] = x[length - 3]
+    b[x[1]] = x[length - 3]
 
 flu_rate = {} #source: https://academic.oup.com/cid/article/66/10/1511/4682599
 for x in range(0,18):
@@ -34,4 +34,7 @@ def detect(country, gender, age):
     # p = gend[gender] / flu_rate[age]
     if country in a.keys() and country in b.keys():
         p *= a[country] / b[country]
+    else:
+        p *= 718187/7775000000
     return p
+    
