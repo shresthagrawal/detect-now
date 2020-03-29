@@ -11,12 +11,10 @@ var audioContext //audio context to help us record
 
 var recordButton = document.getElementById("recordButton");
 var stopButton = document.getElementById("stopButton");
-var pauseButton = document.getElementById("pauseButton");
 
 //add events to those 2 buttons
 recordButton.addEventListener("click", startRecording);
 stopButton.addEventListener("click", stopRecording);
-pauseButton.addEventListener("click", pauseRecording);
 
 function startRecording() {
 	console.log("recordButton clicked");
@@ -34,7 +32,6 @@ function startRecording() {
 
 	recordButton.disabled = true;
 	stopButton.disabled = false;
-	pauseButton.disabled = false
 
 	/*
     	We're using the standard promise based getUserMedia() 
@@ -53,7 +50,7 @@ function startRecording() {
 		audioContext = new AudioContext();
 
 		//update the format 
-		document.getElementById("formats").innerHTML="Format: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz"
+		//document.getElementById("formats").innerHTML="Format: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz"
 
 		/*  assign to gumStream for later use  */
 		gumStream = stream;
@@ -76,23 +73,10 @@ function startRecording() {
 	  	//enable the record button if getUserMedia() fails
     	recordButton.disabled = false;
     	stopButton.disabled = true;
-    	pauseButton.disabled = true
 	});
 }
 
-function pauseRecording(){
-	console.log("pauseButton clicked rec.recording=",rec.recording );
-	if (rec.recording){
-		//pause
-		rec.stop();
-		pauseButton.innerHTML="Resume";
-	}else{
-		//resume
-		rec.record()
-		pauseButton.innerHTML="Pause";
 
-	}
-}
 
 function stopRecording() {
 	console.log("stopButton clicked");
@@ -100,10 +84,8 @@ function stopRecording() {
 	//disable the stop button, enable the record too allow for new recordings
 	stopButton.disabled = true;
 	recordButton.disabled = false;
-	pauseButton.disabled = true;
 
 	//reset button just in case the recording is stopped while paused
-	pauseButton.innerHTML="Pause";
 	
 	//tell the recorder to stop the recording
 	rec.stop();
@@ -128,7 +110,6 @@ function createDownloadLink(blob) {
 	//add controls to the <audio> element
 	au.controls = true;
 	au.src = url;
-	au.style.cssText = "margin-bottom:30px"
 
 	//save to disk link
 	//link.href = url;
@@ -145,21 +126,27 @@ function createDownloadLink(blob) {
 	//li.appendChild(link);
 	
 	//upload link
-	var upload = document.createElement('a');
-	upload.href="#";
-	upload.innerHTML = "Upload";
-	upload.style.cssText = "margin-left:40%";
-
+	$("#submit").prop('disabled', false);
 	call_type = $("#call_type").val();
+if (call_type == "prediction"){
+	 $('#submit').bind("click",function(event){
 
-	if (call_type == "prediction"){
-		upload.addEventListener("click", function(event){
 
 			var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
 		          console.log("Server returned: ",e.target.responseText);
-		          window.location.href = "./thanks";
+		          outcome = JSON.parse(this.responseText)['result']
+		          outcome_test = ""
+		          if (outcome < 10){
+		          	outcome_test = "positive"
+		          }else{
+		          	outcome_test = "negative"
+		          }
+
+		          output_text = "You are identified as " + outcome_test + "for COVID 19, with probability " + Math.round(outcome) + "."
+		          swal("DetectNow Prediction!", output_text);
+		          //window.location.href = "./thanks";
 		      }
 		  };
 		  var fd=new FormData();
@@ -185,7 +172,6 @@ function createDownloadLink(blob) {
 
 		   
 
-		  //fd.append("corona_test",$("#corona_test :selected").val());
 		  fd.append("country",$("#country :selected").val());
 
 		  fd.append("age",$("#age :selected").val());
@@ -196,10 +182,10 @@ function createDownloadLink(blob) {
 		  xhr.send(fd);
 
 		  
-	})
-
+	});
 	}else{
-			upload.addEventListener("click", function(event){
+			 $('#submit').bind("click",function(event){
+
 
 			var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
@@ -242,11 +228,11 @@ function createDownloadLink(blob) {
 		  xhr.send(fd);
 
 		  
-	})
+	});
 	}
 
-	li.appendChild(document.createTextNode (" "))//add a space in between
-	li.appendChild(upload)//add the upload link to li
+	//li.appendChild(document.createTextNode (" "))//add a space in between
+	//li.appendChild(upload)//add the upload link to li
 
 	//add the li element to the ol
 	recordingsList.appendChild(li);

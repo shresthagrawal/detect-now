@@ -42,6 +42,7 @@ def fn_upload_test():
 		request.form.get("gender",'na'),
 		24
 		)
+	print(res)
 	return json.dumps({'result': res})
 
 def upload_save(request, tmp):
