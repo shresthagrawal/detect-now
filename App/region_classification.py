@@ -30,11 +30,8 @@ for x in range(65,120):
     flu_rate[x] = 0.039
 
 def detect(country, gender, age):
-    try:
-        p = gend[gender] / flu_rate[age]
-        # p = gend[gender] / flu_rate[age]
-        if country in a.keys() and country in b.keys():
-            p *= a[country] / b[country]
-    except:
-        p = 0
+    p = gend[gender]
+    # p = gend[gender] / flu_rate[age]
+    if country in a.keys() and country in b.keys():
+        p *= a[country] / b[country]
     return p
