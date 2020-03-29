@@ -2,6 +2,7 @@
 Artificial Intelligence (AI) to detect COVID-19 from cough sound recordings
 Our vision is that every coughing person can get tested for COVID-19 at zero costs directly from home. An AI detects how likely you have COVID-19 simply from your cough sound recording.
 
+# Steps to Reproduce
 ## Clone The repo
 `git clone https://github.com/shresthagrawal/covid19.git`
 `cd covid19`
