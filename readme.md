@@ -1,6 +1,5 @@
 # DetectNow
-Using DeepLearning to detect COVID-19 from cough sound recordings
-Our vision is that every coughing person can get tested for COVID-19 at zero costs directly from home. An AI detects how likely you have COVID-19 simply from your cough sound recording.
+Using DeepLearning to detect COVID-19 from cough recording of the susceptible person. Our vision is that every coughing person can get tested for COVID-19 at zero costs directly from home. 
 
 > This solution was built during a hackathon, checkout the devpost for complete details [here.](https://devpost.com/software/detect-now)
 
